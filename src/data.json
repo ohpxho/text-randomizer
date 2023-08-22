@@ -1,0 +1,22 @@
+{
+	"traditional": [
+		"tell me about yourself",
+		"what are your goals?",
+		"what are your strengths?",
+		"what is your greatest weakness?",
+		"how would you describe your personality?",
+		"when have you been most motivated?",
+		"describe your leadership or management style",
+		"what do you value the most in a teammate?",
+		"what are the most important things for you in a job/company?",
+		"how do you stay current and informed on industry trends and technology?",
+		"do you believed your overqualified for this position?",
+		"if I remember one thing about you, what shoud it be?", 
+		"what are your salary expectations?",
+		"what experiences do you have that qualifies you for this job?",
+		"why do you want to work here?",
+		"why should we hire you?"
+	],
+	"behavioral": ["c", "d"],
+	"technical": ["e", "f"]	
+}
