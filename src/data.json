@@ -18,5 +18,17 @@
 		"why should we hire you?"
 	],
 	"behavioral": ["c", "d"],
-	"technical": ["e", "f"]	
+	"technical": ["e", "f"],
+	"resume": [
+		"tell me about your experiences", 
+		"tell me about these projects"
+	],
+	"do you know yourself?": [
+		"who are you?",
+		"strenghts",
+		"skills",
+		"motivator",
+		"likes & dislikes",
+		"what do you look for in a job?"	
+	]	
 }
