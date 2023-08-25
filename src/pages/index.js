@@ -15,6 +15,7 @@ export default function Home() {
 
   const [txt, setTxt] = useState('###');
   const [txtAreaValue, setTxtAreaValue] = useState('');
+  const [chosenTxt, setChosenTxt] = useState({});
 
   const handleTxtAreaChange = (event) => {
     setTxtAreaValue(event.target.value);
@@ -22,6 +23,8 @@ export default function Home() {
 
   const setTxtAreaValueByType = (event) => {
     const id = event.target.id;
+
+    setChosenTxt({});
 
     if(id == "allType") {
       let union = [];
@@ -33,12 +36,32 @@ export default function Home() {
   };
 
   const randomize = () => {
+    const chosenTxt = getRandomTxt();
+    const txtNoOfTimesChosen = getTxtNoOfTimesChosen(chosenTxt);    
+
+    if(txtNoOfTimesChosen>=3) removeTxtFromTxtArea(chosenTxt);
+
+    if(chosenTxt.trim()==='') setTxt('###');
+    else setTxt(chosenTxt);
+  }
+
+  const getRandomTxt = () => {
     const txt = txtAreaValue;
     const txtArr = txt.split("\n");
     const chosenTxt =txtArr[Math.floor(Math.random() * txtArr.length)];
-    
-    if(chosenTxt.trim()==='') setTxt('###');
-    else setTxt(chosenTxt);
+    return chosenTxt;
+  }
+
+  const getTxtNoOfTimesChosen = (txt) => {
+    if(!chosenTxt[txt]) chosenTxt[txt] = 1;
+    else chosenTxt[txt]++;
+    return chosenTxt[txt]
+  }
+
+  const removeTxtFromTxtArea = (txt) => {
+    const txtArr = txtAreaValue.split('\n');
+    for(let i=0; i<txtArr.length; i++) if(txtArr[i]==txt) txtArr.splice(i, 1)
+    setTxtAreaValue(txtArr.join('\n'));
   }
 
   return (
@@ -50,6 +73,7 @@ export default function Home() {
          </div>
          <div className="sticky top-0 flex w-full p-10 justify-center items-center bg-white border-2 border-slate-500">
             <p className="text-lg font-bold">{txt}</p>
+            <span className="absolute left-5 top-5">{chosenTxt[txt]}</span>
           </div>
           <div className="w-full lg:w-2/3">
            <div className="flex flex-col gap-2 w-full h-full">
@@ -62,6 +86,7 @@ export default function Home() {
               </div>
               
               <button onClick={randomize} className="cursor-pointer w-full my-5 py-3 bg-green-500 text-white">randomize</button>
+              <p>Note: If the question appeared three times already, then it will get remove to give chance to other questions</p>
            </div>
          </div>
       </div>
