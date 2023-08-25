@@ -44,8 +44,11 @@ export default function Home() {
   return (
     <main className={`flex min-h-screen flex-col items-center justify-between ${inter.className}`}>
       <div className="z-10 w-full items-center justify-center font-mono text-sm h-full flex flex-col gap-5 p-12">
-         <p className="font-bold text-xl mb-5 lg:mb-0">Interview Prep. Helper</p>
-         <div className="flex w-full p-10 justify-center items-center bg-white border-2 border-slate-500">
+         <div className="mb-5">
+          <p className="font-bold text-xl lg:mb-0">Interview Prep. Helper</p>
+          <p className="text-xs"><i>for programmers</i></p>
+         </div>
+         <div className="sticky top-0 flex w-full p-10 justify-center items-center bg-white border-2 border-slate-500">
             <p className="text-lg font-bold">{txt}</p>
           </div>
           <div className="w-full lg:w-2/3">
@@ -66,3 +69,10 @@ export default function Home() {
   )
 }
 
+//https://www.simplilearn.com/web-development-interview-questions-article
+//https://intellipaat.com/blog/interview-question/web-developer-interview-questions/
+//https://www.interviewbit.com/software-engineering-interview-questions/#various-categories-of-software
+//https://www.indeed.com/career-advice/interviewing/software-engineer-interview-questions
+//https://blog.hubspot.com/website/backend-interview-questions
+//https://www.interviewbit.com/front-end-developer-interview-questions/
+//https://www.interviewbit.com/javascript-interview-questions/
