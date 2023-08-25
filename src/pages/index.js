@@ -74,5 +74,5 @@ export default function Home() {
 //https://www.interviewbit.com/software-engineering-interview-questions/#various-categories-of-software
 //https://www.indeed.com/career-advice/interviewing/software-engineer-interview-questions
 //https://blog.hubspot.com/website/backend-interview-questions
-//https://www.interviewbit.com/front-end-developer-interview-questions/
+//https://www.interviewbit.com/front-end-developer-interview-questions//
 //https://www.interviewbit.com/javascript-interview-questions/
