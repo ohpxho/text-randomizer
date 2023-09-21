@@ -77,7 +77,7 @@ export default function Home() {
           </div>
           <div className="w-full lg:w-2/3">
            <div className="flex flex-col gap-2 w-full h-full">
-              <p className="my-3">Type text, every <i>new line</i> is another option for randomization</p>
+              <p className="my-3">Type text, every <i>new line</i> is another option</p>
               <textarea placeholder="type here...." className="h-52 outline-none p-5" value={txtAreaValue} onChange={handleTxtAreaChange}></textarea>
               <p className="my-3">Options below are prepared questions for interview (some questions are tailored for me)</p>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
