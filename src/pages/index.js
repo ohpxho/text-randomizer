@@ -39,7 +39,7 @@ export default function Home() {
     const chosenTxt = getRandomTxt();
     const txtNoOfTimesChosen = getTxtNoOfTimesChosen(chosenTxt);    
 
-    if(txtNoOfTimesChosen>=3) removeTxtFromTxtArea(chosenTxt);
+    if(txtNoOfTimesChosen>=1) removeTxtFromTxtArea(chosenTxt);
 
     if(chosenTxt.trim()==='') setTxt('###');
     else setTxt(chosenTxt);
@@ -86,7 +86,6 @@ export default function Home() {
               </div>
               
               <button onClick={randomize} className="cursor-pointer w-full my-5 py-3 bg-green-500 text-white">randomize</button>
-              <p>Note: If the question appeared three times already, then it will get remove to give chance to other questions</p>
            </div>
          </div>
       </div>
